@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+}
+
+.customImageComponent :last-child {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.customLoader {
+  height: 45px;
+  width: 45px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 3px solid rgba(29, 242, 111, 0.2);
+  border-left-color: #2ed573;
+  position: relative;
+  background: transparent;
+
+  animation-name: custom-loader;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes custom-loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
