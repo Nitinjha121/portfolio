@@ -14,15 +14,18 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-const portalID = process.env.HUBSPOT_PORTAL_ID;
-const formID = process.env.HUBSPOT_FORM_ID;
+//react toastify
+import { toast } from "react-toastify";
+
+const portalID = process.env.GATSBY_HUBSPOT_PORTAL_ID;
+const formID = process.env.GATSBY_HUBSPOT_FORM_ID;
 const url =
   "https://api.hsforms.com/submissions/v3/integration/submit/" +
   portalID +
   "/" +
   formID;
 
-function ContactMe(props: PageProps<IAllSanityProjects>) {
+function ContactMe() {
   const [buttonLoader, setButtonLoader] = React.useState(false);
 
   const {
@@ -66,7 +69,10 @@ function ContactMe(props: PageProps<IAllSanityProjects>) {
       });
 
       const res = await response.json();
-    } catch (err) {}
+      toast("Message Sent Successfully.", { type: "success" });
+    } catch (err) {
+      toast("Something went wrong.", { type: "error" });
+    }
 
     setButtonLoader(false);
   };

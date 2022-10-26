@@ -5,6 +5,10 @@ import { useSetLocation } from "./src/hooks";
 //framer motion
 import { AnimatePresence } from "framer-motion";
 
+//react-toastify
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export const onRouteUpdate = ({ location }) => {
   useSetLocation(location);
 };
@@ -15,6 +19,7 @@ export const wrapPageElement = ({ element, props }) => {
 
   return (
     <AnimatePresence mode="wait" initial={false}>
+      <ToastContainer />
       {element}
     </AnimatePresence>
   );

@@ -27,7 +27,7 @@ function Projects(props: PageProps<IAllSanityProjects>) {
 
           return (
             <div
-              className="rounded-lg px-6 py-5 cursor-pointer flex flex-col items-center gap-3 shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] max-w-xl text-primary-color font-bold [&:hover>:last-child]:translate-y-0 [&:hover>:last-child]:!visible relative overflow-hidden [&:hover>:first-child]:scale-75"
+              className="rounded-lg px-6 py-5 cursor-pointer flex flex-col items-center gap-3 shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] max-w-xl text-primary-color font-bold [&:hover>:last-child]:!visible relative overflow-hidden [&:hover>:first-child]:scale-75"
               key={i}
             >
               <ImageWithLoader
@@ -37,7 +37,7 @@ function Projects(props: PageProps<IAllSanityProjects>) {
               />
               <p>{node.name}</p>
 
-              <div className="invisible backdrop-blur-md transition-transform duration-200 translate-y-1/2 absolute top-0 w-full h-full flex justify-center items-center gap-10">
+              <div className="invisible backdrop-blur-md absolute inset-0 flex justify-center items-center gap-10">
                 <a
                   href={node.link}
                   target="_blank"

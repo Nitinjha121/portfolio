@@ -7,7 +7,7 @@ require("dotenv").config({
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "Nitin Jha",
-    siteUrl: `https://www.nitinjha.vercel.app`, 
+    siteUrl: `https://www.nitinjha.vercel.app`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -22,7 +22,7 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-sanity",
       options: {
         projectId: process.env.SANITY_PROJECT_ID,
-        dataset: "production",
+        dataset: "production", 
         token: process.env.SANITY_PROJECT_READ_TOKEN,
       },
     },
