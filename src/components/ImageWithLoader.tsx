@@ -18,7 +18,7 @@ function ImageWithLoader(props: IProps) {
       {loader && <mark className="customLoader !absolute"></mark>}
       <div></div>
       <GatsbyImage
-        onLoad={(data) => {
+        onLoad={() => {
           setLoader(false);
         }}
         className={`${loader ? "opacity-0" : ""} ${className}`}

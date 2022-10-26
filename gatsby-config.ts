@@ -23,7 +23,6 @@ const config: GatsbyConfig = {
       options: {
         projectId: process.env.SANITY_PROJECT_ID,
         dataset: "production",
-        watchMode: true,
         token: process.env.SANITY_PROJECT_READ_TOKEN,
       },
     },

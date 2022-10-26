@@ -41,7 +41,7 @@ function Projects(props: PageProps<IAllSanityProjects>) {
                 <a
                   href={node.link}
                   target="_blank"
-                  className="rounded px-3 py-1 block hover:text-primary-color hover:bg-white shadow-border bg-primary-color text-white"
+                  className="rounded px-3 py-1 block hover:text-primary-color hover:bg-white bg-primary-color text-white"
                 >
                   <LinkAlt width={30} height={30} />
                 </a>
@@ -49,7 +49,7 @@ function Projects(props: PageProps<IAllSanityProjects>) {
                 <a
                   href={node.githubLink}
                   target="_blank"
-                  className="rounded px-3 py-1 block hover:text-primary-color hover:bg-white shadow-border bg-primary-color text-white"
+                  className="rounded px-3 py-1 block hover:text-primary-color hover:bg-white bg-primary-color text-white"
                 >
                   <GitHub width={30} height={30} />
                 </a>
