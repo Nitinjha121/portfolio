@@ -72,7 +72,7 @@ function ContactMe(props: PageProps<IAllSanityProjects>) {
   };
 
   return (
-    <Layout {...props}>
+    <Layout title="Contact Me">
       <h1 className="text-center text-3xl font-bold text-primary-color">
         Contact Me
       </h1>

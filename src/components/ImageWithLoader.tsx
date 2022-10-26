@@ -16,7 +16,7 @@ function ImageWithLoader(props: IProps) {
       className={`customImageComponent relative flex items-center overflow-hidden justify-center ${parentClassName}`}
     >
       {loader && <mark className="customLoader !absolute"></mark>}
-      <div></div>
+
       <GatsbyImage
         onLoad={() => {
           setLoader(false);

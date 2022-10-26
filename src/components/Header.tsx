@@ -4,13 +4,13 @@ import React from "react";
 import { Link } from "gatsby";
 
 //hooks
-import { useRouter } from "src/hooks";
+import { useLocation } from "src/hooks";
 
 //components
 import AnimatedCross from "./AnimatedCross";
 
 function Header() {
-  const router = useRouter();
+  const location = useLocation();
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -37,7 +37,7 @@ function Header() {
               to={option.href}
               key={i}
               className={`transition-all duration-200 ${
-                option.href == router?.path
+                option.href == location?.pathname
                   ? "border-b-4 border-primary-color rounded-none"
                   : "hover:bg-primary-color hover:text-white"
               } rounded px-3 py-1.5`}

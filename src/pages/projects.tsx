@@ -16,7 +16,7 @@ function Projects(props: PageProps<IAllSanityProjects>) {
   const { data } = props;
 
   return (
-    <Layout {...props}>
+    <Layout title="Projects">
       <h1 className="text-center text-3xl font-bold text-primary-color">
         Projects
       </h1>
@@ -37,7 +37,7 @@ function Projects(props: PageProps<IAllSanityProjects>) {
               />
               <p>{node.name}</p>
 
-              <div className="invisible backdrop-blur-md transition-all duration-200 translate-y-1/2 absolute inset-0 flex justify-center items-center gap-10">
+              <div className="invisible backdrop-blur-md transition-transform duration-200 translate-y-1/2 absolute top-0 w-full h-full flex justify-center items-center gap-10">
                 <a
                   href={node.link}
                   target="_blank"

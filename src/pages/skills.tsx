@@ -9,9 +9,9 @@ import { IAllSanitySkills } from "src/types";
 
 function Skills(props: PageProps<IAllSanitySkills>) {
   const { data } = props;
-  console.log(data);
+
   return (
-    <Layout {...props}>
+    <Layout title="Skills">
       <h1 className="text-center text-3xl font-bold text-primary-color">
         Skills
       </h1>

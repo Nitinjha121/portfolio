@@ -5,7 +5,6 @@ import React from "react";
 //components
 import ImageWithLoader from "src/components/ImageWithLoader";
 import Layout from "src/components/layout";
-import SEO from "src/components/SEO";
 
 //types
 import { ISanityHome } from "src/types";
@@ -18,7 +17,7 @@ const IndexPage = (props: PageProps<{ sanityHome: ISanityHome }>) => {
   const imageData = getImage(data.sanityHome.homeImage.asset.gatsbyImageData);
 
   return (
-    <Layout {...props}>
+    <Layout title="Home">
       <main className="flex items-center h-full">
         <div className="flex-1 sm:flex-[0.6]">
           <h1 className="text-5xl leading-snug font-bold flex-1">
@@ -51,7 +50,7 @@ const IndexPage = (props: PageProps<{ sanityHome: ISanityHome }>) => {
         </div>
 
         <ImageWithLoader
-          parentClassName="flex-1 object-cover hidden sm:block w-0"
+          parentClassName="flex-1 hidden sm:flex w-0"
           alt="Home"
           image={imageData!}
         />
@@ -79,7 +78,5 @@ export const query = graphql`
     }
   }
 `;
-
-export const Head = () => <SEO />;
 
 export default IndexPage;

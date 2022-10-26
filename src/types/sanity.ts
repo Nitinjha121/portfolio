@@ -38,3 +38,10 @@ export interface IAllSanityProjects {
 export interface ISanityImageStructure {
   asset: { url: string; gatsbyImageData: GatsbyImageDataArgs };
 }
+
+export interface ISanityMetaTag {
+  sanityMetatag: {
+    title: string;
+    image: ISanityImageStructure;
+  };
+}

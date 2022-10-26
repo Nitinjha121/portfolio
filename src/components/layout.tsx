@@ -2,20 +2,21 @@ import React from "react";
 
 //components
 import Header from "./Header";
-
-//gatsby
-import { PageProps } from "gatsby";
+import SEO from "./SEO";
 
 //framer motion
 import { motion } from "framer-motion";
 
-interface IProps extends Omit<PageProps, "children"> {}
+interface IProps {
+  title: string;
+}
 
 function Layout(props: React.PropsWithChildren<IProps>) {
-  const { children } = props;
+  const { children ,title} = props;
 
   return (
     <div className="h-screen flex flex-col">
+      <SEO title={title} />
       <Header />
       <section className="overflow-y-auto flex-1 overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
         <motion.main
