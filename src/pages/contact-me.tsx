@@ -84,7 +84,7 @@ function ContactMe() {
       </h1>
 
       <form
-        className="grid gap-6 justify-center py-8"
+        className="grid gap-6 sm:justify-center py-8"
         onSubmit={handleSubmit(onSubmit)}
       >
         {contactFormOptions.map((option, i) => (
@@ -92,7 +92,7 @@ function ContactMe() {
             <label className=" font-semibold">{option.label}</label>
             <input
               {...register(option.name)}
-              className="px-4 py-2 rounded border border-gray-400 w-96 outline-none"
+              className="px-4 py-2 rounded border border-gray-400 w-full sm:w-96 outline-none"
               placeholder={option.label}
             />
             {errors[option.name]?.message && (

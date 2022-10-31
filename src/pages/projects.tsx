@@ -27,7 +27,7 @@ function Projects(props: PageProps<IAllSanityProjects>) {
 
           return (
             <div
-              className="rounded-lg px-6 py-5 cursor-pointer flex flex-col items-center gap-3 shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] max-w-xl text-primary-color font-bold [&:hover>:last-child]:!visible relative overflow-hidden [&:hover>:first-child]:scale-75"
+              className="rounded-lg px-6 py-5 cursor-pointer flex flex-col items-center justify-between gap-3 shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] max-w-xl text-primary-color font-bold [&:hover>:last-child]:!visible relative overflow-hidden [&:hover>:first-child]:scale-75"
               key={i}
             >
               <ImageWithLoader
